@@ -1,4 +1,4 @@
-# KPI_DevOps__Task3_Terraform_AWS_Instance
+# DevOps_Task3_Terraform_AWS_Instance
 
 Basic operations to build, change, and destroy AWS infrastructure using Terraform.
 
