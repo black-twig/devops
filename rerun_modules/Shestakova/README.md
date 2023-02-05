@@ -11,35 +11,35 @@ Rerun is a simple framework that turns loose shell scripts into modular automati
 
 Simply "git clone" :
 ```
-$ cd $HOME`
-$ git clone git://github.com/rerun/rerun.git
-$ cd rerun
+cd $HOME`
+git clone git://github.com/rerun/rerun.git
+cd rerun
 ```
 
 Next update .bash_profile with a line like so:
 ```
-$ [ -r $HOME/rerun/etc/bash_completion.sh ] && source $HOME/rerun/etc/bash_completion.sh
+[ -r $HOME/rerun/etc/bash_completion.sh ] && source $HOME/rerun/etc/bash_completion.sh
 ```
 
 Setup the environment variables:
 ```
-$ export PATH=$PATH:$HOME/rerun
-$ export RERUN_MODULES=$HOME/rerun/modules
-$ [ -t 0 ] && export RERUN_COLOR=true
+export PATH=$PATH:$HOME/rerun
+export RERUN_MODULES=$HOME/rerun/modules
+[ -t 0 ] && export RERUN_COLOR=true
 ```
  
 ### Create a Module & Command
 
 ```
-$ rerun stubbs:add-module --module Shestakova --description "Task 1 module" 
-$ rerun stubbs:add-command --module Shestakova --command Oleksandra --description "returns a list of environment variables" 
+rerun stubbs:add-module --module Shestakova --description "Task 1 module" 
+rerun stubbs:add-command --module Shestakova --command Oleksandra --description "returns a list of environment variables" 
 ```
 
 Open the file `~/rerun/modules/Shestakova/commands/Oleksandra/script` for editing with yours favourite editor and replace the `‘Put the command implementation here’` with necessary code and save the script-file.  
 
 Test the script:
 ```
-$ rerun Shestakova:Oleksandra
+rerun Shestakova:Oleksandra
 ```
 
 ### Write Tests
@@ -51,6 +51,6 @@ Remove the whole ‘it_fails_without_a_real_test’ block and provide function(s
 
 Check that the output of the stubbs:test command to make sure the tests pass.
 ```
-$ rerun stubbs:test -m Shestakova -p Oleksandra
+rerun stubbs:test -m Shestakova -p Oleksandra
 ```
 
