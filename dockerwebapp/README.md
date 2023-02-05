@@ -1,5 +1,5 @@
 
-# KPI_DevOps_Task2__Docker_Web_Server 
+# KPI_DevOps_Task2_Docker_Web_Server 
 
 ## Dockerizing a Node.js web app 
 
