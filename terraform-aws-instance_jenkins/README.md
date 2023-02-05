@@ -1,6 +1,6 @@
-# KPI_DevOps_Terraform_Task Create AWS EC2 instance with UserData 
+# KPI_DevOps_Terraform_Jenkins_Task 
 
-## Pull docker Jenkins image and start Jenkins server
+## Create AWS EC2 instance with UserData (Pull docker Jenkins image and start Jenkins server)
 
 ### Write Terraform configuration
 
@@ -85,7 +85,11 @@ After logging in using,  run `docker ps` command and see the running Jenkins con
 
 
 Useful resources:
+
 https://faizanbashir.me/building-an-nginx-webserver-on-aws-using-terraform
+
 https://developer.hashicorp.com/terraform/language
+
 https://docs.docker.com/engine/install/ubuntu/#installation-methods 
+
 https://github.com/jenkinsci/docker/blob/master/README.md
