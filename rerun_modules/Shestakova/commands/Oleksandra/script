@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+
+#/ command: Shestakova:Oleksandra: "returns a list of variables"
+#/ usage: rerun Shestakova:Oleksandra [options]
+#/ rerun-variables: RERUN, RERUN_VERSION, RERUN_MODULES, RERUN_MODULE_DIR
+#/ option-variables: 
+
+. "$RERUN_MODULE_DIR/lib/functions.sh" "Oleksandra" || { 
+  echo >&2 "Failed loading function library." ; exit 1 ; 
+}
+
+set -o errexit -o nounset -o pipefail
+
+rerun_options_parse "$@"
+
+# Command implementation
+# ----------------------
+
+# Color variables
+ANSI_RED='\033[0;31m'
+ANSI_GREEN='\033[0;32m'
+# Var to reset the color setting after that
+ANSI_RESET='\033[0m'
+
+
+#In order to avoid possible issues with multi-line values use the env cmd with the "-0" option to get a null (\0) terminated list of name=value pairs and use a for loop to iterate
+
+#Then the -d '' option of the read cmd specifies that each input line should be delimited by a NUL byte (\0 char). It means that input string is read up to the immediate next NUL character in each invocation of read.
+#The -r option prevents the backslash processing. 
+
+#Variable IFS (Internal Field Separator) determines how Bash recognizes word boundaries while splitting strings.
+#Using "var=value command" (in this case: IFS="=" read -r -d) syntax makes sure IFS is only set differently for the duration of that cmd command.
+
+while IFS='=' read -r -d '' name value; do
+    printf "${ANSI_RED}%s${ANSI_RESET}=${ANSI_GREEN}%s${ANSI_RESET}\n" "$name" "$value"
+done < <(env -0)
+
+# ----------------------
+# Done. Exit with last command exit status.
+exit $?
+

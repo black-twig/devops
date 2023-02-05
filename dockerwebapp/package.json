@@ -1,0 +1,13 @@
+{
+  "name": "docker_web_app",
+  "version": "1.0.0",
+  "description": "Node.js app on Docker (following to tutorial https://nodejs.org/en/docs/guides/nodejs-docker-webapp/)",
+  "author": "Oleksandra V. Shestakova <oleksandra.shestakova@gmail.com> ",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.1"
+  }
+}
