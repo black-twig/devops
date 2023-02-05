@@ -7,13 +7,12 @@ Rerun - a modular shell automation framework to organise your keeper scripts.
 
 Rerun is a simple framework that turns loose shell scripts into modular automation. Rerun will help you organise your scripts into user friendly commands. 
 
-### Install rerun:
+### Install RERUN:
 
 Simply "git clone" :
 `$ cd $HOME`
 `$ git clone git://github.com/rerun/rerun.git`
 `$ cd rerun`
-
 
 Next update .bash_profile with a line like so:
 `$ [ -r $HOME/rerun/etc/bash_completion.sh ] && source $HOME/rerun/etc/bash_completion.sh`
