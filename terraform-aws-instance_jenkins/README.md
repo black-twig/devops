@@ -1,4 +1,4 @@
-# KPI_DevOps_Terraform_Task 
+# KPI_DevOps_Terraform_Jenkins_Task 
 
 ## Create AWS EC2 instance with UserData (Pull docker Jenkins image and start Jenkins server)
 
