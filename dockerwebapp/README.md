@@ -1,6 +1,4 @@
-# Dockerizing a Node.js web app 
-
-## KPI_DevOps_Docker_Web_Server 
+## Dockerizing a Node.js web app 
 
 ### Write Terraform configuration
 
